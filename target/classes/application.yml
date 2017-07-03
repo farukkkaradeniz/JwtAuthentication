@@ -1,0 +1,27 @@
+## YAML Template.
+---
+server:
+    port: 3430
+logging:
+  level:
+    org.springframework.security: DEBUG
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/jwtdatabase
+        username: postgres
+        password: postgres
+        driver-class-name: org.postgresql.Driver
+        platform: postgres
+    jpa:
+        database: POSTGRESQL
+        show-sql: true
+        hibernate:
+            ddl-auto: update 
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQL94Dialect
+                format_sql: true
+                jdbc:
+                    use_get_generated_keys: true
+                temp:
+                    use_jdbc_metadata_defaults: false
